@@ -1,0 +1,15 @@
+{
+  "name": "plaenge-local",
+  "owner": { "name": "Kleber Menezes" },
+  "metadata": {
+    "description": "Marketplace local de desenvolvimento dos plugins de produto do Grupo Plaenge."
+  },
+  "plugins": [
+    {
+      "name": "fluxo-produto-plaenge",
+      "source": "./",
+      "description": "Fluxo de agentes para projetos do Grupo Plaenge: Entendimento da TAP (com benchmark), Reunião de entendimento, Protótipo navegável React, Requisitos funcionais e técnicos e Documento de especificação ADS, coordenados por um orquestrador.",
+      "version": "0.2.0"
+    }
+  ]
+}
