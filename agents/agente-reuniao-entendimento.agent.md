@@ -1,6 +1,6 @@
 ---
 name: agente-reuniao-entendimento
-description: "Etapa 2 do fluxo de produto: processa a transcrição da reunião de entendimento, gera a ata e reemite o Contexto do Projeto atualizado, pronto para prototipação. Normalmente chamado pelo orquestrador fluxo-produto em modo subagente.\n\n<example>\nContext: Orquestrador fluxo-produto conduzindo um projeto\nuser: \"Segue a transcrição da reunião de entendimento, atualiza o contexto\"\nassistant: \"Vou acionar o agente-reuniao-entendimento para executar esta etapa.\"\n<commentary>\nTranscrição + contexto existente = etapa 2.\n</commentary>\n</example>\n"
+description: "Etapa 2 do fluxo de produto: processa a transcrição da reunião de entendimento, gera a ata e atualiza o Contexto do Projeto e as Personas, prontos para prototipação. Normalmente chamado pelo orquestrador fluxo-produto em modo subagente.\n\n<example>\nContext: Orquestrador fluxo-produto conduzindo um projeto\nuser: \"Segue a transcrição da reunião de entendimento, atualiza o contexto\"\nassistant: \"Vou acionar o agente-reuniao-entendimento para executar esta etapa.\"\n<commentary>\nTranscrição + contexto existente = etapa 2.\n</commentary>\n</example>\n"
 color: blue
 ---
 

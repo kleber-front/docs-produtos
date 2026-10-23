@@ -1,15 +1,15 @@
 ---
 name: entendimento-tap
-description: "Lê a TAP (Termo de Abertura do Projeto, também chamada RAP), o MD de Persona (síntese do perfil e jornada de trabalho) e os documentos anexos de um projeto do Grupo Plaenge e gera o Contexto do Projeto — objetivo, escopo e fora de escopo, cenário atual, atores, regras, fluxos, integrações, restrições, premissas e dependências — mais um benchmark de soluções prontas no mercado, as lacunas e gaps classificados e o roteiro de perguntas para a reunião de entendimento. Use quando o usuário anexar uma TAP/RAP ou documentos de abertura e pedir \"entendimento da TAP\", \"analisa essa TAP\", \"prepara a reunião de entendimento\", \"monta o contexto do projeto\", \"existe solução pronta para isso\", \"faz o benchmark\", ou quando o orquestrador fluxo-produto chamar a etapa 1.\n"
+description: "Lê a TAP (Termo de Abertura do Projeto, também chamada RAP), o MD de Persona (síntese do perfil e jornada de trabalho) e os documentos anexos de um projeto do Grupo Plaenge e gera o Contexto do Projeto — objetivo, escopo e fora de escopo, cenário atual, atores, regras, fluxos, integrações, restrições, premissas e dependências — mais as Personas (síntese do perfil e jornada de cada uma), um benchmark de soluções prontas no mercado, as lacunas e gaps classificados e o roteiro de perguntas para a reunião de entendimento. Use quando o usuário anexar uma TAP/RAP ou documentos de abertura e pedir \"entendimento da TAP\", \"analisa essa TAP\", \"prepara a reunião de entendimento\", \"monta o contexto do projeto\", \"existe solução pronta para isso\", \"faz o benchmark\", ou quando o orquestrador fluxo-produto chamar a etapa 1.\n"
 metadata:
   version: "0.1.0"
 ---
 
 # Entendimento da TAP
 
-Transforme a TAP, o MD de Persona e os anexos em três entregas: o **Contexto do Projeto** (a
-visão única que alimenta todas as etapas seguintes), o **benchmark** de soluções de mercado e o
-**roteiro da reunião de entendimento**.
+Transforme a TAP, o MD de Persona e os anexos em quatro entregas: o **Contexto do Projeto** (a
+visão única que alimenta todas as etapas seguintes), as **Personas**, o **benchmark** de
+soluções de mercado e o **roteiro da reunião de entendimento**.
 
 Esta é a primeira etapa. Nada foi validado com o negócio ainda. O trabalho é entender o que a
 documentação estabelece, expor o que ela não diz e chegar à reunião com as perguntas certas —
@@ -34,7 +34,11 @@ Convenções comuns (marcas, IDs, bloco de status, modo subagente) em
 5. **Reconcilie o vocabulário** e monte o glossário antes de redigir o contexto.
 6. **Escreva o Contexto do Projeto** na estrutura de `references/estrutura-contexto.md`. Ela
    segue as seções do Documento de especificação ADS para que nada precise ser reorganizado na
-   etapa 5. Cada persona tem sua síntese e jornada na seção 10.2.
+   etapa 5.
+   Escreva as **Personas** em `01-persona.md`, na estrutura de
+   `references/estrutura-persona.md`: uma por persona do MD de Persona, com síntese e jornada;
+   sem MD (ou para perfil da TAP sem persona no MD), uma por perfil da TAP, só com o que a TAP
+   diz e o resto `[pendente]`. O contexto aponta para elas na seção 10.
 7. **Cruze as fontes** em busca de divergências — padrões em `references/inconsistencias.md`.
    Divergência aparece no tema correspondente com **[divergente]**, não só na tabela final.
 8. **Faça o benchmark** conforme `references/benchmark.md`. Pesquise na web; sem pesquisa real,
@@ -43,9 +47,9 @@ Convenções comuns (marcas, IDs, bloco de status, modo subagente) em
    e os documentos esperados de `references/documentos-esperados.md`. Classifique por
    criticidade.
 10. **Monte a entrevista em profundidade** conforme `references/entrevista-profundidade.md`:
-    resumo do que já se sabe, hipóteses (H-ID) e, por persona (sem MD de Persona, por perfil
-    de entrevistado), os 7 blocos (abertura, contexto e rotina, demonstração, incidentes
-    críticos + 5 Whys, contrastes e casos extremos, Laddering, fechamento), com perguntas-guia
+    resumo do que já se sabe, hipóteses (H-ID) e, por persona do `01-persona.md`, os 7 blocos
+    (abertura, contexto e rotina, demonstração, incidentes críticos + 5 Whys, contrastes e
+    casos extremos, Laddering, fechamento), com perguntas-guia
     neutras (E-ID) a partir dos gatilhos das cinco técnicas — inclusive os do MD de Persona,
     listados em `references/persona.md`. Decida se a reunião precisa de duas sessões.
 11. **Formule as perguntas** (Q-ID), uma ou mais por lacuna crítica, com destinatário, e monte o
@@ -62,6 +66,7 @@ Todo o contexto do projeto fica em uma única pasta, que as etapas seguintes usa
 fluxo/<projeto>/
 ├── fontes/                  TAP, MD de Persona e anexos recebidos (cópias)
 ├── 01-contexto-projeto.md
+├── 01-persona.md
 ├── 01-benchmark.md
 └── 01-roteiro-reuniao.md
 ```
@@ -71,7 +76,9 @@ fluxo/<projeto>/
   a TAP não deixar o nome claro, pergunte (rodando direto com o usuário) ou use a sigla/título
   do documento e registre como **[inferido]** no cabeçalho do contexto.
 - **Pasta existente:** reaproveite. Não apague nem sobrescreva arquivos de outras etapas nem o
-  `estado.md` do orquestrador. Se já houver `01-*.md`, reemita com nova versão e linha no
+  `estado.md` do orquestrador. Se já houver `01-contexto-projeto.md` ou `01-persona.md`,
+  atualize-os no lugar — só o que foi afetado, com linha no Registro de alterações e sem
+  versão (ver convenções). Benchmark e roteiro são reemitidos com nova versão e linha no
   histórico.
 - **Fontes:** copie a TAP, o MD de Persona e cada anexo para `fontes/` mantendo o nome
   original. Não altere o arquivo original. Se já existir arquivo de mesmo nome com conteúdo
@@ -85,8 +92,9 @@ Na raiz de `fluxo/<projeto>/`:
 
 | Arquivo | Conteúdo |
 |---------|----------|
-| `01-contexto-projeto.md` | Contexto do Projeto v0.1 — estrutura completa, com marcas |
-| `01-benchmark.md` | Benchmark completo, sempre em arquivo próprio. A seção 15 do contexto traz só o resumo e aponta para ele |
+| `01-contexto-projeto.md` | Contexto do Projeto, Status Rascunho — estrutura completa, com marcas. Arquivo incremental, sem versão |
+| `01-persona.md` | Personas, Status Rascunho — uma por persona do MD (ou por perfil da TAP, sem MD), com síntese em 10 itens, jornada, origem e pendências. Arquivo incremental, sem versão |
+| `01-benchmark.md` | Benchmark completo, sempre em arquivo próprio. O contexto não traz o benchmark |
 | `01-roteiro-reuniao.md` | Formato (uma ou duas sessões), participantes, o que já se sabe, hipóteses (H-), entrevista em 7 blocos por perfil (E-), perguntas de confirmação e decisão (Q-), pauta, ligação dúvida ↔ pergunta e materiais a pedir |
 
 Abra o contexto com uma linha de diagnóstico: quantas lacunas críticas existem e se a TAP é
@@ -151,6 +159,7 @@ Use para **detectar ausência** e **pesquisar mercado**, nunca para preencher o 
 
 - `references/convencoes.md` — marcas, IDs, status, modo subagente.
 - `references/estrutura-contexto.md` — seções do Contexto do Projeto.
+- `references/estrutura-persona.md` — formato do `01-persona.md` e como ele é atualizado.
 - `references/benchmark.md` — como pesquisar e apresentar soluções de mercado.
 - `references/roteiro-reuniao.md` — como montar a pauta e as perguntas.
 - `references/entrevista-profundidade.md` — as cinco técnicas de entrevista e como montar as E-.

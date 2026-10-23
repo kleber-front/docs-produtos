@@ -2,6 +2,32 @@
 
 Versões do plugin `fluxo-produto-plaenge`. Formato: [versionamento semântico](https://semver.org/lang/pt-BR/).
 
+## [0.6.0] — 2026-10-23
+
+### Adicionado
+- Etapa 1 gera o `01-persona.md`, ao lado do contexto, do benchmark e do roteiro: uma persona
+  por persona do MD de Persona, com síntese em 10 itens, jornada, origem e pendências. Sem MD
+  de Persona (ou para perfil da TAP sem persona no MD), a persona é gerada a partir da TAP, só
+  com o que a TAP diz e o resto `[pendente]`. Formato em `references/estrutura-persona.md`.
+- O `01-persona.md` é incremental e sem versão, como o contexto: a etapa 2 o atualiza com o que
+  a entrevista de cada persona revelou, e as etapas 3 e 4 o consultam (dispositivo, local de
+  trabalho, familiaridade com tecnologia).
+
+### Alterado
+- As personas saem do contexto: a seção 10.2 deixa de existir e a seção 10 volta a ser uma
+  tabela de perfis, com a coluna Persona apontando para o `01-persona.md`. O contexto continua
+  consolidando por tema o que as personas relatam (§5, §7, §12, §14). Gates 1 e 2, pacote de
+  entrada, roteiro, fluxograma e README atualizados.
+- Contexto do Projeto passa a ser um arquivo único e incremental, sem número de versão: cada
+  etapa atualiza no lugar só as seções afetadas e registra a alteração no novo Registro de
+  alterações (data, etapa, seções, o que mudou). O marco de validação deixa de ser a v1.0 e
+  passa a ser o Status (Rascunho → Validado). Convenções, etapas 2 a 5, Gate 2, pacote de
+  entrada, `estado.md`, fluxograma e README atualizados. Os demais artefatos `.md` continuam
+  versionados.
+- Benchmark fica só em `01-benchmark.md`, com versão própria: a seção 15 (Benchmark de
+  mercado) sai do contexto e as seções 16–21 passam a 15–20 (Lacunas e gaps agora é a 15).
+  Contextos de projetos já em andamento mantêm a numeração antiga.
+
 ## [0.5.0] — 2026-10-23
 
 ### Adicionado

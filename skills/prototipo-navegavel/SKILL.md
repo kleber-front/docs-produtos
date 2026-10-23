@@ -19,8 +19,11 @@ Convenções comuns em `references/convencoes.md`. Leia antes de começar.
 
 ## Entradas
 
-- `01-contexto-projeto.md` v1.0 — obrigatório. Com versão 0.x (sem reunião), avise que o
-  protótipo será exploratório e marque o mapa de telas como tal.
+- `01-contexto-projeto.md` com Status Validado — obrigatório. Com Status Rascunho (sem
+  reunião), avise que o protótipo será exploratório e marque o mapa de telas como tal.
+- `01-persona.md` — consulta: onde cada persona trabalha, a familiaridade com tecnologia e a
+  jornada orientam dispositivo, densidade e ordem de navegação. Não cria tela nem campo: o que
+  vira tela vem do contexto.
 - `02-ata-reuniao.md` e `02-prontidao-prototipo.md` — obrigatórios quando existirem.
 - `design-system.md` — se já existir de projeto anterior, reutilize e evolua; não recrie.
 - Modelo ADS (`documentacao-especificacao/assets`) — consulta: os blocos de tela do modelo

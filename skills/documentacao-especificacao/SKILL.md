@@ -20,7 +20,7 @@ Convenções comuns em `references/convencoes.md`. Leia antes de começar.
 
 | Artefato | Uso no documento |
 |----------|------------------|
-| `01-contexto-projeto.md` v1.0 | Objetivo, Escopo, Justificativa, Cenário atual, Restrições, Premissas, Dependências |
+| `01-contexto-projeto.md` (Status Validado) | Objetivo, Escopo, Justificativa, Cenário atual, Restrições, Premissas, Dependências |
 | `02-ata-reuniao.md` | Decisões citadas; partes interessadas; anexos |
 | `03-mapa-telas.md` + `03-capturas/` | Seções de funcionalidade e imagens de protótipo |
 | `04-requisitos.md` | Regras e requisitos por funcionalidade, requisitos técnicos, testes |
@@ -32,7 +32,8 @@ Sem `04-requisitos.md`, pare: o documento não tem o que especificar.
 ## Fluxo
 
 1. **Confirme as entradas e versões.** Registre a versão de cada artefato usado; ela vai para o
-   resumo do Controle de Versões e para os Anexos.
+   resumo do Controle de Versões e para os Anexos. O Contexto do Projeto não tem versão: cite a
+   data de atualização dele.
 2. **Confirme os dados da capa** (projeto, analista, departamento, solicitante, data) e a versão
    do documento. Dado ausente → pergunte; não use o texto do modelo.
 3. **Proponha o índice** — lista de funcionalidades (uma subseção H2 por TL ou grupo de TLs) e

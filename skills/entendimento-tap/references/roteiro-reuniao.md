@@ -1,6 +1,6 @@
 # Roteiro da reunião de entendimento
 
-O roteiro é o que transforma o contexto v0.x em v1.0. Reunião sem roteiro produz transcrição
+O roteiro é o que leva o contexto de Rascunho a Validado. Reunião sem roteiro produz transcrição
 longa e pouca decisão.
 
 O roteiro tem duas partes: a **entrevista em profundidade** (E-, perguntas abertas e neutras,
@@ -21,9 +21,9 @@ montagem das E- em `entrevista-profundidade.md`.
 - **Agrupe por tema e por destinatário.** O roteiro precisa permitir liberar quem já respondeu.
 - **Criticidade primeiro.** Escopo, fora de escopo, perfis e regra central antes de detalhe de
   campo.
-- **Inclua o benchmark.** Se houver solução de mercado com aderência relevante, a pergunta de
-  decisão ("seguimos com desenvolvimento ou avaliamos X?") entra na abertura da sessão de
-  decisão — nunca na entrevista.
+- **Inclua o benchmark** (de `01-benchmark.md`). Se houver solução de mercado com aderência
+  relevante, a pergunta de decisão ("seguimos com desenvolvimento ou avaliamos X?") entra na
+  abertura da sessão de decisão — nunca na entrevista.
 - **Limite.** Uma reunião de 60 minutos comporta de 15 a 25 perguntas, somando E- e Q-. Mais que
   isso, proponha duas sessões (critérios em `entrevista-profundidade.md`) ou envie as menores
   por escrito antes.
@@ -45,7 +45,7 @@ montagem das E- em `entrevista-profundidade.md`.
 ```markdown
 # Roteiro — Reunião de entendimento — <Projeto>
 
-Versão: 0.1 | Data: dd/mm/aaaa | Base: Contexto do Projeto v0.x
+Versão: 0.1 | Data: dd/mm/aaaa | Base: Contexto do Projeto atualizado em dd/mm/aaaa
 Formato: sessão única | duas sessões (1 — entrevista em profundidade; 2 — decisão)
 Duração sugerida: <min por sessão>
 Participantes sugeridos:
@@ -60,9 +60,9 @@ FON-ID. Só fato documentado; o que não está documentado vai para hipóteses o
 |------|----------|------------------------------|---------------------|---------------|--------------|
 | H-001 | A conferência é refeita porque os dados chegam por planilha | FON-002, aba 3 [inferido] | E-004, E-005 | Reforça LAC-004 | Nova E- de incidente |
 
-## Entrevista em profundidade — <persona ou perfil do entrevistado>
-<Repita esta seção para cada persona do MD de Persona; sem ele, para cada perfil: quem executa,
-gestor, área parceira...>
+## Entrevista em profundidade — <persona>
+<Repita esta seção para cada persona do `01-persona.md`: quem executa, gestor, área
+parceira...>
 Entrevistado: <papel> | Sessão: <1 ou única> | Duração: <min>
 
 ### 1. Abertura

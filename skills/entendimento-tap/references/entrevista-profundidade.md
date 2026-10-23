@@ -68,8 +68,8 @@ requisito, regra decidida nem solução escolhida. Requisitos nascem na etapa 4.
 
 ## Estrutura da entrevista
 
-Uma entrevista por persona do MD de Persona (sem ele, por perfil de entrevistado), sempre nesta
-ordem. Os gatilhos que o MD de Persona oferece — dores com exemplo, etapas da jornada com
+Uma entrevista por persona do `01-persona.md` (do MD de Persona ou gerada a partir da TAP),
+sempre nesta ordem. Os gatilhos que o MD de Persona oferece — dores com exemplo, etapas da jornada com
 planilha ou contorno, decisões relatadas — estão em `persona.md`.
 
 | # | Bloco | Técnica | Conteúdo |

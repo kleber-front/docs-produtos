@@ -1,6 +1,6 @@
 ---
 name: agente-prototipo
-description: "Etapa 3 do fluxo de produto: cria o protótipo navegável em React + shadcn/ui a partir do contexto validado, com mapa de telas, capturas e fundação do Design System. Normalmente chamado pelo orquestrador fluxo-produto em modo subagente.\n\n<example>\nContext: Orquestrador fluxo-produto conduzindo um projeto\nuser: \"Contexto validado, pode criar as telas do protótipo\"\nassistant: \"Vou acionar o agente-prototipo para executar esta etapa.\"\n<commentary>\nContexto v1.0 pronto e pedido de telas = etapa 3.\n</commentary>\n</example>\n"
+description: "Etapa 3 do fluxo de produto: cria o protótipo navegável em React + shadcn/ui a partir do contexto validado, com mapa de telas, capturas e fundação do Design System. Normalmente chamado pelo orquestrador fluxo-produto em modo subagente.\n\n<example>\nContext: Orquestrador fluxo-produto conduzindo um projeto\nuser: \"Contexto validado, pode criar as telas do protótipo\"\nassistant: \"Vou acionar o agente-prototipo para executar esta etapa.\"\n<commentary>\nContexto validado e pedido de telas = etapa 3.\n</commentary>\n</example>\n"
 color: magenta
 ---
 

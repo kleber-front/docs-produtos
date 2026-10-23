@@ -5,8 +5,8 @@ Fluxo de agentes que leva um projeto da TAP ao Documento de especificação ADS.
 | # | Etapa | Skill | Agente | Entrega |
 |---|-------|-------|--------|---------|
 | — | Orquestrador | `fluxo-produto` | — | `estado.md`, gates, rodadas de perguntas |
-| 1 | Entendimento da TAP | `entendimento-tap` | `agente-entendimento-tap` | Contexto do Projeto v0.x, benchmark, roteiro da reunião |
-| 2 | Reunião de entendimento | `reuniao-entendimento` | `agente-reuniao-entendimento` | Ata, Contexto v1.0, prontidão para protótipo |
+| 1 | Entendimento da TAP | `entendimento-tap` | `agente-entendimento-tap` | Contexto do Projeto e Personas (incrementais, sem versão), benchmark, roteiro da reunião |
+| 2 | Reunião de entendimento | `reuniao-entendimento` | `agente-reuniao-entendimento` | Ata, Contexto e Personas validados, prontidão para protótipo |
 | 3 | Protótipo | `prototipo-navegavel` | `agente-prototipo` | Protótipo React, mapa de telas, capturas, Design System, telas no Figma |
 | 4 | Requisitos | `requisitos-projeto` | `agente-requisitos` | RN, RF por tela, RNF, RT, técnicos (DT, INT, ENT, infra/segurança), CT |
 | 5 | Documentação | `documentacao-especificacao` | `agente-documentacao` | `.docx` no modelo ADS |
@@ -132,7 +132,7 @@ publicadas sem subir a versão não chegam a quem já instalou.
 
 ## Arquivos gerados (por projeto, em `fluxo/<projeto>/`)
 
-`estado.md` · `fontes/` · `01-contexto-projeto.md` · `01-benchmark.md` · `01-roteiro-reuniao.md` ·
+`estado.md` · `fontes/` · `01-contexto-projeto.md` · `01-persona.md` · `01-benchmark.md` · `01-roteiro-reuniao.md` ·
 `02-ata-reuniao.md` · `02-prontidao-prototipo.md` · `prototipo/` · `03-mapa-telas.md` ·
 `03-capturas/` · `03-validacao-prototipo.md` · `design-system.md` · `04-requisitos.md` ·
 `05-especificacao-<projeto>.docx`

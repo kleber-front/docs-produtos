@@ -8,7 +8,7 @@ prototipador a inventar — e invenção em tela vira requisito por acidente.
 | # | Item | Crítico? | Como verificar no contexto |
 |---|------|----------|----------------------------|
 | 1 | Escopo e fora de escopo confirmados | Sim | Seção 3 sem [pendente] em item estrutural |
-| 2 | Perfis definidos com o que cada um faz | Sim | Seção 10.1 completa; nenhum ator citado fora dela |
+| 2 | Perfis definidos com o que cada um faz | Sim | Seção 10 completa; nenhum ator citado fora dela |
 | 3 | Funcionalidades candidatas confirmadas | Sim | Seção 11 com situação "confirmada" |
 | 4 | Fluxo principal com estado final | Sim | Seção 13 |
 | 5 | Dados principais por funcionalidade | Sim | Para cada funcionalidade, quais informações o usuário vê ou informa |

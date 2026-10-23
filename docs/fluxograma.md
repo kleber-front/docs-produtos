@@ -24,14 +24,14 @@ flowchart TD
     AVP --> CRIA
     CRIA --> E1
 
-    E1["1 · Entendimento da TAP<br/>agente-entendimento-tap"] --> A1["fontes/ (TAP, Persona e anexos)<br/>01-contexto-projeto.md v0.x<br/>01-benchmark.md<br/>01-roteiro-reuniao.md"]
+    E1["1 · Entendimento da TAP<br/>agente-entendimento-tap"] --> A1["fontes/ (TAP, Persona e anexos)<br/>01-contexto-projeto.md (Rascunho)<br/>01-persona.md (Rascunho)<br/>01-benchmark.md<br/>01-roteiro-reuniao.md"]
     A1 --> G1{"Gate 1<br/>contexto completo, benchmark,<br/>perguntas Q- com destinatário"}
     G1 -->|não atendido| E1
     G1 -->|atendido + confirmação| REU[["Reunião de entendimento<br/>com negócio e TI"]]
 
     REU --> TR["Transcrição da reunião"]
     TR --> E2["2 · Reunião de entendimento<br/>agente-reuniao-entendimento"]
-    E2 --> A2["02-ata-reuniao.md<br/>01-contexto-projeto.md v1.0<br/>02-prontidao-prototipo.md"]
+    E2 --> A2["02-ata-reuniao.md<br/>01-contexto-projeto.md (Validado)<br/>01-persona.md (Validado)<br/>02-prontidao-prototipo.md"]
     A2 --> G2{"Gate 2<br/>escopo confirmado,<br/>prontidão para protótipo OK"}
     G2 -->|não atendido| E2
     G2 -->|atendido + confirmação| E3
@@ -94,7 +94,7 @@ flowchart TD
     D -->|"não (negócio, TI, fornecedor)"| SUP{"Seguir com<br/>suposição declarada?"}
     SUP -->|sim| RS["Registra suposição em estado.md"]
     SUP -->|não| AG(["Aguarda terceiros<br/>registrado em estado.md"])
-    AQ --> RE["Reemissão completa<br/>pelo mesmo agente"]
+    AQ --> RE["Reemissão pelo mesmo agente<br/>(contexto: atualização no lugar)"]
     RS --> RE
     RE --> C
 

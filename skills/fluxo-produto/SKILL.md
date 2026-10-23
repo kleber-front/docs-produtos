@@ -18,13 +18,17 @@ Leia antes de iniciar.
 
 | # | Etapa | Agente | Skill | Saída principal | Gate |
 |---|-------|--------|-------|-----------------|------|
-| 1 | Entendimento da TAP | `agente-entendimento-tap` | `entendimento-tap` | `fontes/` + `01-contexto-projeto.md` (v0.x) + `01-benchmark.md` + `01-roteiro-reuniao.md` | Contexto completo, benchmark feito, perguntas Q- com destinatário |
-| 2 | Reunião de entendimento | `agente-reuniao-entendimento` | `reuniao-entendimento` | `01-contexto-projeto.md` (v1.0) + `02-ata-reuniao.md` | Escopo e fora de escopo confirmados; checklist de prontidão para protótipo OK |
+| 1 | Entendimento da TAP | `agente-entendimento-tap` | `entendimento-tap` | `fontes/` + `01-contexto-projeto.md` (Rascunho) + `01-persona.md` (Rascunho) + `01-benchmark.md` + `01-roteiro-reuniao.md` | Contexto completo, personas geradas, benchmark feito, perguntas Q- com destinatário |
+| 2 | Reunião de entendimento | `agente-reuniao-entendimento` | `reuniao-entendimento` | `01-contexto-projeto.md` (Validado) + `01-persona.md` (Validado) + `02-ata-reuniao.md` | Escopo e fora de escopo confirmados; checklist de prontidão para protótipo OK |
 | 3 | Protótipo | `agente-prototipo` | `prototipo-navegavel` | `prototipo/` + `03-mapa-telas.md` + `design-system.md` | Toda tela ligada ao contexto; validação com negócio registrada |
 | 4 | Requisitos | `agente-requisitos` | `requisitos-projeto` | `04-requisitos.md` | Todo RF OK com CT; todo RF não OK em pendência com destinatário |
 | 5 | Documentação | `agente-documentacao` | `documentacao-especificacao` | `05-especificacao-<projeto>.docx` | Documento no modelo ADS, sem seção inventada, pendências visíveis |
 | 6 | Backlog (opcional) | — | `estruturacao-backlog` (instalada no ambiente) | `06-backlog.md` | Todo requisito coberto |
 | 7 | Pré-estimativa (opcional) | — | `preparacao-estimativa` (instalada no ambiente) | `07-pre-estimativa.md` | Itens no DoR ou bloqueio declarado |
+
+O `01-contexto-projeto.md` e o `01-persona.md` são arquivos únicos e incrementais, sem versão:
+cada etapa atualiza no lugar o que foi afetado e registra a alteração no próprio arquivo (ver
+convenções). Os demais artefatos `.md` seguem versionados.
 
 Etapas 6 e 7 usam skills instaladas à parte no ambiente. Chame-as como subagente genérico pedindo
 para carregar a skill pelo nome; se não estiverem instaladas, avise e encerre o fluxo na etapa 5.
@@ -55,7 +59,8 @@ para carregar a skill pelo nome; se não estiverem instaladas, avise e encerre o
 2. **Chame o subagente** com a ferramenta de subagentes da plataforma, usando o agente da
    tabela (sem suporte a subagentes, veja "Ferramentas da plataforma"). O prompt sempre
    contém: "Modo subagente", o nome do projeto, a lista de arquivos de entrada, o caminho de
-   saída esperado, a versão a gerar e — em reemissão — as respostas recebidas, uma por Q-ID.
+   saída esperado, a versão a gerar (no contexto e nas personas: criar ou atualizar no
+   lugar) e — em reemissão — as respostas recebidas, uma por Q-ID.
 3. **Leia o bloco de status** devolvido.
    - `aguardando-respostas` → vá para a rodada de perguntas.
    - `bloqueado` → mostre o motivo ao usuário e pare.
@@ -65,7 +70,8 @@ para carregar a skill pelo nome; se não estiverem instaladas, avise e encerre o
 5. **Apresente ao usuário**: o que foi gerado (uma linha), o resultado do gate, as pendências
    críticas e a pergunta de avanço. Indique o caminho dos arquivos gerados (ou anexe-os, se a
    plataforma permitir).
-6. **Avance só com confirmação explícita.** Atualize `estado.md` (versão, gate, data).
+6. **Avance só com confirmação explícita.** Atualize `estado.md` (versão — no contexto e nas
+   personas, o Status —, gate, data).
 
 ## Envio ao Figma (etapa 3)
 
@@ -85,7 +91,8 @@ um novo. Sem o conector, avise o usuário em uma linha e siga — não bloqueia 
   aguardar a resposta.
 - Na etapa 1, as perguntas **não** são respondidas agora: elas formam o roteiro da reunião.
   O gate da etapa 1 é ter as perguntas certas, não as respostas.
-- Com as respostas, chame o mesmo agente de novo pedindo reemissão completa.
+- Com as respostas, chame o mesmo agente de novo pedindo reemissão completa — no contexto e
+  nas personas, atualização no lugar do que foi afetado.
 
 ## Retornos entre etapas
 

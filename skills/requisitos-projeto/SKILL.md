@@ -18,7 +18,10 @@ Convenções comuns em `references/convencoes.md`. Leia antes de começar.
 
 ## Entradas
 
-- `01-contexto-projeto.md` v1.0 — obrigatório.
+- `01-contexto-projeto.md` com Status Validado — obrigatório.
+- `01-persona.md` — consulta: contexto de uso de cada ator (local, dispositivo, familiaridade
+  com tecnologia) para RNF de usabilidade, acessibilidade e plataforma. Requisito que nascer
+  daí cita a persona como origem.
 - `02-ata-reuniao.md` — obrigatório quando existir.
 - `03-mapa-telas.md` e protótipo — obrigatórios para RF de interface; sem eles, RF de tela fica
   com status *Incompleto* e a ausência é pendência crítica.

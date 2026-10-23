@@ -22,7 +22,7 @@ Texto aceita `**negrito**` inline. As marcas `[pendente]`, `[inferido]`, `[diver
   },
   "versoes": [
     {"autor": "Kleber Menezes", "versao": "0.1", "data": "19/10/2026",
-     "resumo": "Versão inicial a partir do Contexto v1.0, Requisitos v1.0 e protótipo v1.0."}
+     "resumo": "Versão inicial a partir do Contexto de 17/10/2026, Requisitos v1.0 e protótipo v1.0."}
   ],
   "blocos": [
     {"t": "h1", "texto": "Objetivo"},

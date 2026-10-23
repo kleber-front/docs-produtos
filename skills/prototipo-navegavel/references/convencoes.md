@@ -54,7 +54,7 @@ Criticidade se mede pelo impacto na próxima etapa, não pela importância do te
 
 O glossário nasce na etapa 1 e é o vocabulário oficial do projeto. Etapas seguintes não
 renomeiam conceitos; se precisarem de um termo novo, adicionam ao glossário e registram a
-mudança no histórico do contexto.
+mudança no Registro de alterações do contexto.
 
 ## Modo subagente
 
@@ -73,7 +73,7 @@ Quando roda diretamente com o usuário, pergunte pela ferramenta de perguntas da
 
 ```
 STATUS: concluido | concluido-com-ressalvas | aguardando-respostas | bloqueado
-ARQUIVO: <caminho do artefato principal> (versão x.y)
+ARQUIVO: <caminho do artefato principal> (versão x.y; no Contexto do Projeto e nas Personas, o Status)
 GATE: atendido | nao-atendido — <motivo em uma linha>
 CRITICAS_ABERTAS: <n>
 PERGUNTAS: <n> (destinatários: <lista>)
@@ -87,7 +87,8 @@ RETORNO_A_ETAPA: — | <etapa> — <o que foi descoberto>
 - Versão mais recente não vence automaticamente. Divergência sem decisão registrada fica
   aberta.
 - Reemita completo. Ao receber respostas, gere o artefato inteiro de novo, com histórico de
-  versão — nunca adendo solto.
+  versão — nunca adendo solto. A exceção são o Contexto do Projeto e as Personas, atualizados
+  no lugar (ver abaixo): a resposta entra na seção do tema ou da persona, nunca em adendo.
 - Discussão não é decisão. Ideia mencionada sem registro de que foi decidida vira pergunta.
 - Use conhecimento próprio para detectar ausência e sugerir, nunca para fechar conteúdo do
   projeto no lugar de quem decide.
@@ -106,3 +107,21 @@ Histórico
 0.x para rascunho; 1.0 quando o gate da etapa é atendido e o usuário confirma. Alteração em
 artefato Validado gera nova versão e linha no histórico. "Ajustes gerais" não é descrição de
 alteração.
+
+## Contexto do Projeto e Personas: arquivos incrementais
+
+O `01-contexto-projeto.md` e o `01-persona.md` não seguem o versionamento acima. Cada um é um
+arquivo único, sem número de versão, que cresce ao longo do fluxo:
+
+- **Atualize no lugar.** Cada etapa altera só as seções (ou personas) afetadas e preserva o
+  resto como está. Não reescreva o que não mudou, não crie cópia nem arquivo novo.
+- **Registre cada atualização** com uma linha no Registro de alterações do próprio arquivo:
+  `| Data | Etapa | Seções | O que mudou |` no contexto, `| Data | Etapa | Personas | O que
+  mudou |` nas Personas. A linha diz o conteúdo, não "ajustes gerais".
+- **Cabeçalho:** `Projeto: <nome> | Artefato: Contexto do Projeto` (ou `Personas`) e
+  `Status: Rascunho | Em revisão | Validado | Atualizado em: dd/mm/aaaa`.
+- **Status:** Rascunho na etapa 1; Validado quando o gate 2 é atendido e o usuário confirma.
+  Mudança em arquivo Validado sem decisão registrada (DEC-) passa o Status para Em revisão
+  até a confirmação.
+- **Referência:** quem cita esses arquivos (outros artefatos, bloco de status, `estado.md`,
+  documento ADS) usa o Status e a data de atualização no lugar da versão.
