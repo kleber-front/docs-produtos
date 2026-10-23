@@ -60,8 +60,9 @@ FON-ID. Só fato documentado; o que não está documentado vai para hipóteses o
 |------|----------|------------------------------|---------------------|---------------|--------------|
 | H-001 | A conferência é refeita porque os dados chegam por planilha | FON-002, aba 3 [inferido] | E-004, E-005 | Reforça LAC-004 | Nova E- de incidente |
 
-## Entrevista em profundidade — <perfil do entrevistado>
-<Repita esta seção para cada perfil: quem executa, gestor, área parceira...>
+## Entrevista em profundidade — <persona ou perfil do entrevistado>
+<Repita esta seção para cada persona do MD de Persona; sem ele, para cada perfil: quem executa,
+gestor, área parceira...>
 Entrevistado: <papel> | Sessão: <1 ou única> | Duração: <min>
 
 ### 1. Abertura
@@ -108,5 +109,6 @@ Perguntas Menores ou de levantamento (volumetria, lista de regionais, exemplos d
 
 ## Materiais a pedir
 | Material | Quem tem | Quando (antes / durante) | Para que serve (LAC-/H-) |
-Telas, planilhas, exemplos reais, documentos ausentes.
+Telas, planilhas, exemplos reais, documentos ausentes. Sem MD de Persona, ele entra aqui,
+no modelo `assets/modelo-persona.md`, para antes da reunião.
 ```

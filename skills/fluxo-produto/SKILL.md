@@ -38,12 +38,15 @@ para carregar a skill pelo nome; se não estiverem instaladas, avise e encerre o
      com fornecedor;
    - onde salvar: pasta do workspace aberto, outra pasta do computador ou área de trabalho da
      sessão.
-2. Confirme que a TAP (ou RAP) e os demais documentos foram anexados. Sem documento, pare e
-   peça — não rode a etapa 1 sobre material hipotético.
+2. Confirme que a TAP (ou RAP), o MD de Persona e os demais documentos foram anexados. Sem
+   TAP, pare e peça — não rode a etapa 1 sobre material hipotético. Sem MD de Persona, avise
+   em uma linha, indique o modelo `skills/entendimento-tap/assets/modelo-persona.md` e siga se
+   o usuário não anexar: a etapa 1 registra a ausência como lacuna crítica.
 3. Crie a pasta `fluxo/<projeto>/` e o arquivo de estado `fluxo/<projeto>/estado.md`
    (modelo em `references/estado.md`). Passe a pasta à etapa 1: o `agente-entendimento-tap`
-   cria `fontes/` com as cópias da TAP e dos anexos e grava ali os artefatos `01-*`. Das
-   etapas seguintes em diante, documentos brutos são lidos de `fluxo/<projeto>/fontes/`.
+   cria `fontes/` com as cópias da TAP, do MD de Persona e dos anexos e grava ali os artefatos
+   `01-*`. Das etapas seguintes em diante, documentos brutos são lidos de
+   `fluxo/<projeto>/fontes/`.
 
 ## Ciclo de cada etapa
 

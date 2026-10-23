@@ -4,8 +4,9 @@ Verifique lendo o artefato. Cada item é sim/não. Um "não" em item crítico = 
 
 ## Gate 1 — Entendimento da TAP
 
-- [ ] Pasta `fluxo/<projeto>/` com `fontes/` contendo a TAP e todos os anexos recebidos (crítico)
+- [ ] Pasta `fluxo/<projeto>/` com `fontes/` contendo a TAP, o MD de Persona (se recebido) e todos os anexos recebidos (crítico)
 - [ ] Todas as fontes inventariadas com FON-ID, status e caminho em `fontes/` (crítico)
+- [ ] Cada persona recebida está na seção 10.2 com origem por item e jornada refletida no cenário atual; sem MD de Persona, a ausência é LAC crítica com Q-, linha em Documentos ausentes e item em Materiais a pedir do roteiro (crítico)
 - [ ] Contexto tem todas as seções da estrutura, com seções sem informação marcadas como lacuna (crítico)
 - [ ] Fora de escopo declarado, ou registrado como lacuna crítica (crítico)
 - [ ] Benchmark em `01-benchmark.md`, feito com ao menos 3 alternativas ou justificativa de por que há menos, cada uma com link e data de consulta (crítico)
@@ -14,7 +15,7 @@ Verifique lendo o artefato. Cada item é sim/não. Um "não" em item crítico = 
 - [ ] Toda pergunta tem destinatário
 - [ ] Roteiro da reunião gerado, com participantes sugeridos e ordem por tema
 - [ ] Roteiro traz o que já se sabe (só fato com FON-ID), hipóteses H- com forma de teste e ligação de toda LAC- crítica e H- a uma E- ou Q-
-- [ ] Entrevista em 7 blocos por perfil de entrevistado, com E- neutras para cada gatilho encontrado (problema, dor, atividade demonstrável, regra com variação, pedido em forma de solução), cada E- com técnica, sondas, origem e LAC-/H- que cobre; blocos sem gatilho justificados
+- [ ] Entrevista em 7 blocos por persona (sem MD de Persona, por perfil de entrevistado), com E- neutras para cada gatilho encontrado (problema, dor, atividade demonstrável, regra com variação, pedido em forma de solução), cada E- com técnica, sondas, origem e LAC-/H- que cobre; blocos sem gatilho justificados
 - [ ] Nenhum requisito registrado (RN, RF, RNF, RT, DT, INT, ENT, CT) nem "o sistema deve…" no contexto ou no roteiro (crítico)
 
 ## Gate 2 — Reunião de entendimento

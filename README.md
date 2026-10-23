@@ -124,7 +124,9 @@ publicadas sem subir a versão não chegam a quem já instalou.
 
 ## Como usar
 
-- Fluxo completo: "Inicia o fluxo do projeto X" + anexar a TAP.
+- Fluxo completo: "Inicia o fluxo do projeto X" + anexar a TAP e o MD de Persona (síntese do
+  perfil e jornada de trabalho; modelo em `skills/entendimento-tap/assets/modelo-persona.md`).
+  Sem o MD de Persona, a etapa 1 segue e registra a ausência como lacuna crítica.
 - Etapa avulsa: chame a skill pelo nome (ex.: "faz o entendimento desta TAP").
 - Retomar: "continua o fluxo do projeto X" — o orquestrador lê `fluxo/<projeto>/estado.md`.
 

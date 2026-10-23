@@ -16,6 +16,7 @@ Saber o que cada formato omite por construção é o que separa uma leitura de u
 - [Protótipo, wireframe, print de tela](#protótipo-wireframe-print-de-tela)
 - [Documentação de sistema existente](#documentação-de-sistema-existente)
 - [Diagrama de processo](#diagrama-de-processo)
+- [MD de Persona](#md-de-persona)
 
 ---
 
@@ -104,3 +105,15 @@ exceção, volumetria.
 **Verifique**: todo losango de decisão sem regra escrita é lacuna. Todo fluxo que termina
 sem estado final é lacuna. Raia sem ator nomeado é lacuna. E confirme se o diagrama é
 as-is ou to-be — diagramas raramente dizem, e a diferença muda tudo.
+
+---
+
+## MD de Persona
+**Costuma trazer**: rotina, ferramentas, planilhas paralelas, dores e a jornada de quem executa
+o processo, na voz dele.
+**Costuma omitir**: exceções, volume real, o que outros papéis fazem, e por que as coisas são
+feitas assim.
+**Verifique**: se cada dor tem exemplo recente; se a jornada tem início, fim e tempo por etapa;
+se os sistemas citados batem com os da TAP; se é relato de quem executa ou de quem gerencia.
+Relato não é decisão: regra descrita pela persona vira R-xx **[inferido]** e pergunta. Leitura
+e consolidação em `persona.md`.

@@ -7,6 +7,10 @@ importa é que a ausência seja consciente, não descoberta tarde.
 Ao listar um documento ausente, diga para que ele serve e quem costuma tê-lo. "Falta o
 documento X" sem isso não ajuda ninguém a buscá-lo.
 
+Em todo tipo de projeto, além da TAP, espera-se o **MD de Persona** (síntese do perfil e jornada
+de trabalho, no modelo `assets/modelo-persona.md`). Ao contrário do resto da lista, a ausência
+dele é sempre lacuna crítica — registro em `persona.md`, seção "Sem MD de Persona".
+
 ## Sumário
 - [Sistema novo](#sistema-novo)
 - [Evolução de sistema existente](#evolução-de-sistema-existente)

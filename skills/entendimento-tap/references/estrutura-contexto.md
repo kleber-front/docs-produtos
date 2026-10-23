@@ -35,6 +35,7 @@ Motivos e benefícios declarados; indicadores de sucesso, se houver (com meta e 
 
 ## 5. Cenário atual
 Como o processo é feito hoje (as-is): ferramentas, planilhas, e-mails, volume, dores citadas.
+Inclua a jornada e as dores relatadas pelas personas (10.2), consolidadas por tema, com origem.
 Separe fato do as-is de expectativa do to-be.
 
 ## 6. Restrições
@@ -42,7 +43,9 @@ Imposições externas: prazo, orçamento, regulatório, política de TI. Cada um
 
 ## 7. Premissas
 O que é assumido como verdadeiro para o projeto acontecer (ex.: regionais atendidas, idioma,
-conectividade em obra). Premissa sem origem = [inferido] e pergunta.
+conectividade em obra). Premissa sem origem = [inferido] e pergunta. Local de trabalho e
+familiaridade com tecnologia das personas (10.2) que o projeto pressupõe (ex.: uso no celular,
+na obra) entram aqui como [inferido] e pergunta.
 
 ## 8. Dependências de negócio
 | Área de negócio | Responsabilidade | Parte interessada | Funcionalidade relacionada |
@@ -51,8 +54,33 @@ conectividade em obra). Premissa sem origem = [inferido] e pergunta.
 | Área de TI | Responsabilidade | Responsável | Funcionalidade relacionada |
 
 ## 10. Atores e perfis
-| Perfil | Quem é na organização | O que faz no processo | Origem |
-Perfil citado em outra seção e ausente aqui = lacuna.
+### 10.1 Perfis
+| Perfil | Quem é na organização | O que faz no processo | Persona | Origem |
+Perfil citado em outra seção e ausente aqui = lacuna. Persona: papel da persona de 10.2 que
+representa o perfil, ou "—".
+
+### 10.2 Personas
+Uma subseção por persona do MD de Persona, identificada pelo papel (o nome de quem preencheu
+fica só nas fontes). Relato da persona é fato do as-is declarado, não regra nem decisão. Sem MD
+de Persona → [pendente] — ver LAC-00x.
+
+#### <Papel> — FON-00x
+| Item | Síntese | Origem |
+|------|---------|--------|
+| Função e setor | | FON-00x, item 1 |
+| Objetivo principal da função | | item 2 |
+| Atividades recorrentes e tempo | | item 3 |
+| Sistemas e ferramentas | | item 4 |
+| Informações e de onde vêm | | item 5 |
+| Decisões e aprovações | | item 6 |
+| Principais dores (exemplo recente) | | item 7 |
+| Áreas e papéis com que interage | | item 8 |
+| Onde trabalha | | item 9 |
+| Familiaridade com tecnologia (1 a 5) | | item 10 |
+
+Jornada atual (as-is):
+| # | Etapa | O que faz | Sistema ou ferramenta | Informação | Tempo | Dor | Com quem |
+Item ou célula em branco, "não sei" ou vago = [pendente] — ver LAC-00x.
 
 ## 11. Funcionalidades candidatas
 Lista do que o sistema precisa permitir, no nível de capacidade (ex.: "consultar solicitações",

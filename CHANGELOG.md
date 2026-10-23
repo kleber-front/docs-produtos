@@ -2,6 +2,26 @@
 
 Versões do plugin `fluxo-produto-plaenge`. Formato: [versionamento semântico](https://semver.org/lang/pt-BR/).
 
+## [0.5.0] — 2026-10-23
+
+### Adicionado
+- MD de Persona como entrada da etapa 1, ao lado da TAP: síntese do perfil em 10 itens e fluxo
+  de trabalho / mapa de jornada. Modelo em `skills/entendimento-tap/assets/modelo-persona.md`.
+- Referência `persona.md` (etapa 1): natureza da fonte, item → seção do contexto, cruzamento
+  com a TAP, completude, gatilhos de entrevista e tratamento da ausência.
+- Contexto do Projeto: seção 10 dividida em 10.1 Perfis (com coluna Persona) e 10.2 Personas
+  (síntese e jornada por persona). Nenhuma seção renumerada.
+
+### Alterado
+- Etapa 1: o MD de Persona é copiado para `fontes/`, inventariado como FON e consolidado no
+  contexto; a entrevista em profundidade passa a ser por persona. Sem o MD, a etapa segue e
+  registra a ausência como lacuna crítica, com pergunta e material a pedir.
+- Orquestrador: abertura confere o MD de Persona e indica o modelo; pacote de entrada e Gate 1
+  atualizados.
+- Fluxograma com a verificação do MD de Persona na abertura.
+- Prontidão para protótipo (etapa 2): o item de perfis verifica a seção 10.1, como antes da
+  divisão da seção 10.
+
 ## [0.4.0] — 2026-10-23
 
 ### Adicionado
