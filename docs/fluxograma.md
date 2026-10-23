@@ -21,7 +21,7 @@ flowchart TD
     TAP -->|sim| CRIA["Cria fluxo/&lt;projeto&gt;/estado.md"]
     CRIA --> E1
 
-    E1["1 · Entendimento da TAP<br/>agente-entendimento-tap"] --> A1["01-contexto-projeto.md v0.x<br/>01-benchmark.md<br/>01-roteiro-reuniao.md"]
+    E1["1 · Entendimento da TAP<br/>agente-entendimento-tap"] --> A1["fontes/ (TAP e anexos)<br/>01-contexto-projeto.md v0.x<br/>01-benchmark.md<br/>01-roteiro-reuniao.md"]
     A1 --> G1{"Gate 1<br/>contexto completo, benchmark,<br/>perguntas Q- com destinatário"}
     G1 -->|não atendido| E1
     G1 -->|atendido + confirmação| REU[["Reunião de entendimento<br/>com negócio e TI"]]

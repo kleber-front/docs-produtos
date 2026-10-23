@@ -13,6 +13,10 @@ errada (ex.: requisitos lidos da TAP bruta em vez do contexto validado).
 
 ● obrigatório · ○ consulta (para citar origem primária ou seguir a estrutura do modelo)
 
+Na etapa 1, os documentos brutos são passados pelo caminho original; o agente os copia para
+`fluxo/<projeto>/fontes/`. A partir da etapa 2, passe os caminhos dentro de `fontes/`. O
+`01-benchmark.md` acompanha o `01-contexto` sempre que este for obrigatório para o agente.
+
 ## Prompt-padrão para o subagente
 
 ```

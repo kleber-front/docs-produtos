@@ -22,34 +22,62 @@ Convenções comuns (marcas, IDs, bloco de status, modo subagente) em
 
 1. **Confirme o material.** Sem TAP ou documento de abertura, peça e pare. Não monte contexto
    sobre material hipotético.
-2. **Inventarie as fontes** com FON-ID: nome, tipo, versão/data, autor, uma linha do que cobre,
-   status (OK, Incompleto, Ilegível, Vazio, Versão conflitante). Leia cada tipo de fonte
-   conforme `references/leitura-fontes.md`.
-3. **Leia tudo antes de escrever.** Consolide por **tema**, não por documento — regras em
+2. **Prepare a pasta do projeto** e copie as fontes para ela — ver "Pasta do projeto" abaixo.
+3. **Inventarie as fontes** com FON-ID: nome, tipo, versão/data, autor, uma linha do que cobre,
+   status (OK, Incompleto, Ilegível, Vazio, Versão conflitante), caminho em `fontes/`. Leia
+   cada tipo de fonte conforme `references/leitura-fontes.md`.
+4. **Leia tudo antes de escrever.** Consolide por **tema**, não por documento — regras em
    `references/consolidacao.md`.
-4. **Reconcilie o vocabulário** e monte o glossário antes de redigir o contexto.
-5. **Escreva o Contexto do Projeto** na estrutura de `references/estrutura-contexto.md`. Ela
+5. **Reconcilie o vocabulário** e monte o glossário antes de redigir o contexto.
+6. **Escreva o Contexto do Projeto** na estrutura de `references/estrutura-contexto.md`. Ela
    segue as seções do Documento de especificação ADS para que nada precise ser reorganizado na
    etapa 5.
-6. **Cruze as fontes** em busca de divergências — padrões em `references/inconsistencias.md`.
+7. **Cruze as fontes** em busca de divergências — padrões em `references/inconsistencias.md`.
    Divergência aparece no tema correspondente com **[divergente]**, não só na tabela final.
-7. **Faça o benchmark** conforme `references/benchmark.md`. Pesquise na web; sem pesquisa real,
+8. **Faça o benchmark** conforme `references/benchmark.md`. Pesquise na web; sem pesquisa real,
    não há benchmark.
-8. **Identifique lacunas e gaps** (LAC-ID) varrendo as áreas de `references/pontos-abertos.md`
+9. **Identifique lacunas e gaps** (LAC-ID) varrendo as áreas de `references/pontos-abertos.md`
    e os documentos esperados de `references/documentos-esperados.md`. Classifique por
    criticidade.
-9. **Formule as perguntas** (Q-ID), uma ou mais por lacuna crítica, com destinatário, e monte o
-   roteiro da reunião conforme `references/roteiro-reuniao.md`.
-10. **Entregue** e pare. As perguntas desta etapa são respondidas na reunião, não no chat —
+10. **Formule as perguntas** (Q-ID), uma ou mais por lacuna crítica, com destinatário, e monte o
+    roteiro da reunião conforme `references/roteiro-reuniao.md`.
+11. **Entregue** e pare. As perguntas desta etapa são respondidas na reunião, não no chat —
     exceto as que bloqueiam a própria análise (objetivo do projeto ilegível, TAP de outro
     projeto, versão conflitante sem indicação de qual vale).
 
+## Pasta do projeto
+
+Todo o contexto do projeto fica em uma única pasta, que as etapas seguintes usam:
+
+```
+fluxo/<projeto>/
+├── fontes/                  TAP e anexos recebidos (cópias)
+├── 01-contexto-projeto.md
+├── 01-benchmark.md
+└── 01-roteiro-reuniao.md
+```
+
+- **Nome:** use a pasta informada no pedido (modo subagente: `Pasta: fluxo/<projeto>/`). Sem
+  ela, derive o nome curto da TAP — minúsculas, sem acento, palavras separadas por hífen. Se
+  a TAP não deixar o nome claro, pergunte (rodando direto com o usuário) ou use a sigla/título
+  do documento e registre como **[inferido]** no cabeçalho do contexto.
+- **Pasta existente:** reaproveite. Não apague nem sobrescreva arquivos de outras etapas nem o
+  `estado.md` do orquestrador. Se já houver `01-*.md`, reemita com nova versão e linha no
+  histórico.
+- **Fontes:** copie a TAP e cada anexo para `fontes/` mantendo o nome original. Não altere o
+  arquivo original. Se já existir arquivo de mesmo nome com conteúdo diferente, não
+  sobrescreva: salve a cópia nova com sufixo `-v2`, `-v3`… e registre a situação no
+  inventário. Arquivo idêntico já presente não é copiado de novo.
+- **Referências:** o inventário (FON-ID) e as citações usam o caminho dentro de `fontes/`.
+
 ## Saídas
+
+Na raiz de `fluxo/<projeto>/`:
 
 | Arquivo | Conteúdo |
 |---------|----------|
 | `01-contexto-projeto.md` | Contexto do Projeto v0.1 — estrutura completa, com marcas |
-| `01-benchmark.md` | Benchmark — pode ir dentro do contexto (seção 15) se for curto; separe quando passar de 5 soluções |
+| `01-benchmark.md` | Benchmark completo, sempre em arquivo próprio. A seção 15 do contexto traz só o resumo e aponta para ele |
 | `01-roteiro-reuniao.md` | Pauta, participantes sugeridos, perguntas agrupadas por tema e por destinatário |
 
 Abra o contexto com uma linha de diagnóstico: quantas lacunas críticas existem e se a TAP é

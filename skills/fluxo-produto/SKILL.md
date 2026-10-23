@@ -18,7 +18,7 @@ Leia antes de iniciar.
 
 | # | Etapa | Agente | Skill | Saída principal | Gate |
 |---|-------|--------|-------|-----------------|------|
-| 1 | Entendimento da TAP | `agente-entendimento-tap` | `entendimento-tap` | `01-contexto-projeto.md` (v0.x) + `01-roteiro-reuniao.md` | Contexto completo, benchmark feito, perguntas Q- com destinatário |
+| 1 | Entendimento da TAP | `agente-entendimento-tap` | `entendimento-tap` | `fontes/` + `01-contexto-projeto.md` (v0.x) + `01-benchmark.md` + `01-roteiro-reuniao.md` | Contexto completo, benchmark feito, perguntas Q- com destinatário |
 | 2 | Reunião de entendimento | `agente-reuniao-entendimento` | `reuniao-entendimento` | `01-contexto-projeto.md` (v1.0) + `02-ata-reuniao.md` | Escopo e fora de escopo confirmados; checklist de prontidão para protótipo OK |
 | 3 | Protótipo | `agente-prototipo` | `prototipo-navegavel` | `prototipo/` + `03-mapa-telas.md` + `design-system.md` | Toda tela ligada ao contexto; validação com negócio registrada |
 | 4 | Requisitos | `agente-requisitos` | `requisitos-projeto` | `04-requisitos.md` | Todo RF OK com CT; todo RF não OK em pendência com destinatário |
@@ -40,7 +40,9 @@ para carregar a skill pelo nome; se não estiverem instaladas, avise e encerre o
 2. Confirme que a TAP (ou RAP) e os demais documentos foram anexados. Sem documento, pare e
    peça — não rode a etapa 1 sobre material hipotético.
 3. Crie a pasta `fluxo/<projeto>/` e o arquivo de estado `fluxo/<projeto>/estado.md`
-   (modelo em `references/estado.md`).
+   (modelo em `references/estado.md`). Passe a pasta à etapa 1: o `agente-entendimento-tap`
+   cria `fontes/` com as cópias da TAP e dos anexos e grava ali os artefatos `01-*`. Das
+   etapas seguintes em diante, documentos brutos são lidos de `fluxo/<projeto>/fontes/`.
 
 ## Ciclo de cada etapa
 

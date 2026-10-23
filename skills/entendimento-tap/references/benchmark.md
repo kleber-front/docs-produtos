@@ -75,6 +75,9 @@ Use os critérios que a TAP torna relevantes; estes são o ponto de partida:
 
 ## Formato
 
+Arquivo próprio `fluxo/<projeto>/01-benchmark.md`, com o cabeçalho de versionamento das
+convenções, sempre na mesma versão do contexto. A seção 15 do contexto traz só o resumo.
+
 ```markdown
 ## Benchmark de mercado
 

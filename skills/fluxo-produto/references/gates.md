@@ -4,10 +4,11 @@ Verifique lendo o artefato. Cada item é sim/não. Um "não" em item crítico = 
 
 ## Gate 1 — Entendimento da TAP
 
-- [ ] Todas as fontes inventariadas com FON-ID e status (crítico)
+- [ ] Pasta `fluxo/<projeto>/` com `fontes/` contendo a TAP e todos os anexos recebidos (crítico)
+- [ ] Todas as fontes inventariadas com FON-ID, status e caminho em `fontes/` (crítico)
 - [ ] Contexto tem todas as seções da estrutura, com seções sem informação marcadas como lacuna (crítico)
 - [ ] Fora de escopo declarado, ou registrado como lacuna crítica (crítico)
-- [ ] Benchmark feito com ao menos 3 alternativas ou justificativa de por que há menos, cada uma com link e data de consulta (crítico)
+- [ ] Benchmark em `01-benchmark.md`, feito com ao menos 3 alternativas ou justificativa de por que há menos, cada uma com link e data de consulta (crítico)
 - [ ] Benchmark não recomenda decisão; apresenta opções e critérios
 - [ ] Toda lacuna crítica tem ao menos uma pergunta Q- associada (crítico)
 - [ ] Toda pergunta tem destinatário

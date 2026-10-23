@@ -75,7 +75,8 @@ lacuna. Fluxo sem estado final = lacuna.
 Interlocutor não nomeado = lacuna.
 
 ## 15. Benchmark de mercado
-Resumo e tabela comparativa (detalhe em `01-benchmark.md` quando separado).
+Resumo de 3 a 5 linhas e tabela comparativa reduzida (BMK-ID, solução, aderência). Detalhe
+completo sempre em `01-benchmark.md`.
 
 ## 16. Lacunas e gaps
 | LAC-ID | Tipo (lacuna/gap) | Descrição | Área | Criticidade | Por que importa | Pergunta(s) |
