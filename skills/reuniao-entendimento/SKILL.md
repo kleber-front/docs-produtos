@@ -20,7 +20,8 @@ Convenções comuns em `references/convencoes.md`. Leia antes de começar.
 
 - `01-contexto-projeto.md` (v0.x) — obrigatório.
 - `01-roteiro-reuniao.md` — obrigatório; sem ele, reconstrua a lista de Q- a partir da seção 16
-  do contexto e registre isso.
+  do contexto e registre isso. Inclui as E- da entrevista em profundidade, quando houver.
+  Em reunião de duas sessões, processe as duas transcrições juntas.
 - Transcrição, ata ou anotações da reunião — obrigatório. Sem transcrição, peça e pare.
 - Documentos novos entregues na reunião — opcional; cada um ganha FON-ID novo.
 
@@ -37,17 +38,23 @@ Convenções comuns em `references/convencoes.md`. Leia antes de começar.
    - **Adiada** — foi encaminhada a alguém, com ou sem prazo.
    - **Invalidada** — perdeu sentido (ex.: escopo mudou).
    Cite o trecho (minuto ou fala) que sustenta a classificação.
-4. **Capture o que não estava no roteiro**: regras, atores, funcionalidades, restrições ou
+4. **Trate cada E- da entrevista em profundidade** como **Explorada**, **Parcial** ou **Não
+   explorada**, e registre os achados conforme a técnica — ver "Achados da entrevista" em
+   `references/leitura-transcricao.md`. Achado de entrevista é fato do as-is, lacuna ou
+   necessidade a confirmar: nunca fecha Q- nem vira DEC sozinho. Classifique cada H- como
+   **Confirmada**, **Derrubada** ou **Não testada**, citando a E-/Q- e o trecho; hipótese
+   confirmada entra no contexto com a origem da reunião, não como regra decidida.
+5. **Capture o que não estava no roteiro**: regras, atores, funcionalidades, restrições ou
    exclusões novas. Cada uma entra com origem "Reunião dd/mm, fala de <pessoa>".
-5. **Registre decisões** como DEC-ID com responsável e data. Sem quem decidiu, não é DEC: é
+6. **Registre decisões** como DEC-ID com responsável e data. Sem quem decidiu, não é DEC: é
    pergunta de governança.
-6. **Atualize o contexto** aplicando respostas e decisões em cada tema, e **reemita inteiro**
+7. **Atualize o contexto** aplicando respostas e decisões em cada tema, e **reemita inteiro**
    como v1.0 (ou v0.x+1 se o gate não for atendido). Regras de merge em
    `references/consolidacao.md`; redação em `references/redacao-entendimento.md`.
-7. **Atualize lacunas**: fechadas, abertas, novas. Lacuna fechada permanece na tabela com
+8. **Atualize lacunas**: fechadas, abertas, novas. Lacuna fechada permanece na tabela com
    situação "Fechada por DEC-00x / Q-00x" — não some.
-8. **Verifique a prontidão para protótipo** com `references/prontidao-prototipo.md`.
-9. **Gere a ata** e as **pendências pós-reunião** com destinatário e prazo citado.
+9. **Verifique a prontidão para protótipo** com `references/prontidao-prototipo.md`.
+10. **Gere a ata** e as **pendências pós-reunião** com destinatário e prazo citado.
 
 ## Saídas
 
@@ -74,6 +81,12 @@ Data: dd/mm/aaaa | Duração: <min> | Base: Contexto v0.x | Fonte: FON-0xx (tran
 
 ## Decisões
 | DEC-ID | Decisão | Responsável | Trecho de origem | Afeta |
+
+## Achados da entrevista em profundidade
+| E-ID | Técnica | Situação | Achado | Tipo (as-is, causa, workaround, regra implícita, necessidade) | Vira (LAC-/Q-/seção do contexto) | Trecho |
+
+## Hipóteses
+| H-ID | Hipótese | Situação (confirmada, derrubada, não testada) | Evidência (E-/Q-) | Trecho |
 
 ## Respostas ao roteiro
 | Q-ID | Pergunta | Situação | Resposta | Quem respondeu | Trecho |

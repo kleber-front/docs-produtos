@@ -39,9 +39,14 @@ Convenções comuns (marcas, IDs, bloco de status, modo subagente) em
 9. **Identifique lacunas e gaps** (LAC-ID) varrendo as áreas de `references/pontos-abertos.md`
    e os documentos esperados de `references/documentos-esperados.md`. Classifique por
    criticidade.
-10. **Formule as perguntas** (Q-ID), uma ou mais por lacuna crítica, com destinatário, e monte o
-    roteiro da reunião conforme `references/roteiro-reuniao.md`.
-11. **Entregue** e pare. As perguntas desta etapa são respondidas na reunião, não no chat —
+10. **Monte a entrevista em profundidade** conforme `references/entrevista-profundidade.md`:
+    resumo do que já se sabe, hipóteses (H-ID) e, por perfil de entrevistado, os 7 blocos
+    (abertura, contexto e rotina, demonstração, incidentes críticos + 5 Whys, contrastes e
+    casos extremos, Laddering, fechamento), com perguntas-guia neutras (E-ID) a partir dos
+    gatilhos das cinco técnicas. Decida se a reunião precisa de duas sessões.
+11. **Formule as perguntas** (Q-ID), uma ou mais por lacuna crítica, com destinatário, e monte o
+    roteiro da reunião com E- e Q- conforme `references/roteiro-reuniao.md`.
+12. **Entregue** e pare. As perguntas desta etapa são respondidas na reunião, não no chat —
     exceto as que bloqueiam a própria análise (objetivo do projeto ilegível, TAP de outro
     projeto, versão conflitante sem indicação de qual vale).
 
@@ -78,7 +83,7 @@ Na raiz de `fluxo/<projeto>/`:
 |---------|----------|
 | `01-contexto-projeto.md` | Contexto do Projeto v0.1 — estrutura completa, com marcas |
 | `01-benchmark.md` | Benchmark completo, sempre em arquivo próprio. A seção 15 do contexto traz só o resumo e aponta para ele |
-| `01-roteiro-reuniao.md` | Pauta, participantes sugeridos, perguntas agrupadas por tema e por destinatário |
+| `01-roteiro-reuniao.md` | Formato (uma ou duas sessões), participantes, o que já se sabe, hipóteses (H-), entrevista em 7 blocos por perfil (E-), perguntas de confirmação e decisão (Q-), pauta, ligação dúvida ↔ pergunta e materiais a pedir |
 
 Abra o contexto com uma linha de diagnóstico: quantas lacunas críticas existem e se a TAP é
 suficiente para a reunião. Se não for, diga na primeira linha.
@@ -112,6 +117,11 @@ Máximo de 5 perguntas, respondíveis em uma linha. Todo o resto vai para o rote
 arquitetura, estimar esforço ou prazo, recomendar comprar ou construir. O benchmark apresenta
 opções e critérios; a decisão é do patrocinador.
 
+Ainda não é o momento de requisitos. Não use os prefixos RN, RF, RNF, RT, DT, INT, ENT nem CT,
+não redija "o sistema deve…" e não transforme pedido de solução (tela, botão, campo,
+relatório) em funcionalidade decidida: registre a necessidade e a solução pedida como
+**[sugerido]**, e leve ao roteiro uma E- de Laddering.
+
 ## Tom e estilo
 
 - Escreva como quem documenta: "O processo de reembolso é feito por e-mail (FON-001, item 2)",
@@ -137,6 +147,7 @@ Use para **detectar ausência** e **pesquisar mercado**, nunca para preencher o 
 - `references/estrutura-contexto.md` — seções do Contexto do Projeto.
 - `references/benchmark.md` — como pesquisar e apresentar soluções de mercado.
 - `references/roteiro-reuniao.md` — como montar a pauta e as perguntas.
+- `references/entrevista-profundidade.md` — as cinco técnicas de entrevista e como montar as E-.
 - `references/leitura-fontes.md` — o que cada tipo de documento costuma omitir.
 - `references/consolidacao.md` — fundir fontes, separar decisão de discussão, vocabulário.
 - `references/inconsistencias.md` — padrões de divergência entre fontes.

@@ -13,10 +13,15 @@ Verifique lendo o artefato. Cada item é sim/não. Um "não" em item crítico = 
 - [ ] Toda lacuna crítica tem ao menos uma pergunta Q- associada (crítico)
 - [ ] Toda pergunta tem destinatário
 - [ ] Roteiro da reunião gerado, com participantes sugeridos e ordem por tema
+- [ ] Roteiro traz o que já se sabe (só fato com FON-ID), hipóteses H- com forma de teste e ligação de toda LAC- crítica e H- a uma E- ou Q-
+- [ ] Entrevista em 7 blocos por perfil de entrevistado, com E- neutras para cada gatilho encontrado (problema, dor, atividade demonstrável, regra com variação, pedido em forma de solução), cada E- com técnica, sondas, origem e LAC-/H- que cobre; blocos sem gatilho justificados
+- [ ] Nenhum requisito registrado (RN, RF, RNF, RT, DT, INT, ENT, CT) nem "o sistema deve…" no contexto ou no roteiro (crítico)
 
 ## Gate 2 — Reunião de entendimento
 
 - [ ] Toda Q- do roteiro tem situação: respondida, parcial, não respondida, adiada (crítico)
+- [ ] Toda E- do roteiro tem situação (explorada, parcial, não explorada) e nenhum achado de entrevista foi registrado como DEC ou regra decidida
+- [ ] Toda H- tem situação (confirmada, derrubada, não testada) com evidência
 - [ ] Decisões novas registradas como DEC- com responsável (crítico)
 - [ ] Contexto reemitido inteiro como v1.0 (não adendo), com histórico (crítico)
 - [ ] Escopo e fora de escopo confirmados pelo usuário (crítico)

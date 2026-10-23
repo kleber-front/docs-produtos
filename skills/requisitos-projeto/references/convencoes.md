@@ -26,6 +26,8 @@ Sequenciais por tipo, três dígitos, nunca renumerados. Item removido fica com 
 |---------|------|----------------|
 | FON | Fonte (documento recebido) | 1 TAP |
 | Q | Pergunta para a reunião / para alguém | 1 TAP (e seguintes) |
+| E | Pergunta aberta da entrevista em profundidade (técnica + gatilho) | 1 TAP |
+| H | Hipótese a confirmar ou derrubar na entrevista | 1 TAP |
 | LAC | Lacuna ou gap | 1 TAP |
 | DEC | Decisão registrada (com responsável e data) | 2 Reunião |
 | BMK | Solução avaliada no benchmark | 1 TAP |
