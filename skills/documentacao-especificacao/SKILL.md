@@ -42,8 +42,10 @@ Sem `04-requisitos.md`, pare: o documento não tem o que especificar.
    tem uma fonte definida; respeite a ordem do modelo.
 5. **Monte o JSON de conteúdo** no formato de `references/formato-conteudo.md`.
 6. **Gere o .docx** com o script:
-   `python3 ${CLAUDE_PLUGIN_ROOT}/skills/documentacao-especificacao/scripts/gerar_especificacao.py conteudo.json`
-   (sem a variável disponível, use o caminho da skill). O script mantém capa, estilos, cabeçalho,
+   `python <pasta desta skill>/scripts/gerar_especificacao.py conteudo.json`
+   — `<pasta desta skill>` é a pasta onde está este `SKILL.md` (no Claude Code,
+   `${CLAUDE_PLUGIN_ROOT}/skills/documentacao-especificacao`). Use `python3` ou `py` se `python`
+   não existir no ambiente. O script mantém capa, estilos, cabeçalho,
    rodapé e sumário do modelo, preenche capa e Controle de Versões e substitui o corpo.
 7. **Verifique**: converta para PDF (`soffice --headless --convert-to pdf`), gere imagens das
    páginas (`pdftoppm -r 60 -png`) e confira capa, sumário, uma seção de funcionalidade com

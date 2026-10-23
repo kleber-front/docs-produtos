@@ -12,24 +12,54 @@ Fluxo de agentes que leva um projeto da TAP ao Documento de especificação ADS.
 | 5 | Documentação | `documentacao-especificacao` | `agente-documentacao` | `.docx` no modelo ADS |
 
 Depois da etapa 5, o orquestrador pode seguir para `estruturacao-backlog` e
-`preparacao-estimativa`, se essas skills estiverem instaladas na conta.
+`preparacao-estimativa`, se essas skills estiverem instaladas no ambiente.
 
 ## Instalação
 
-No Claude Code, rode uma vez:
+O mesmo repositório funciona como marketplace de plugins para o **GitHub Copilot** (VS Code e
+CLI) e para o **Claude Code**. Para outras ferramentas que leem skills no formato `SKILL.md`,
+veja [Outras ferramentas](#outras-ferramentas).
+
+O repositório é privado: é preciso ter acesso de leitura a ele e o git autenticado na máquina
+(`gh auth login` ou credencial do Git for Windows).
+
+### GitHub Copilot no VS Code
+
+Requer o VS Code com o GitHub Copilot Chat e a opção `chat.plugins.enabled` ligada.
+
+1. Adicione o marketplace no `settings.json` do usuário (ou do workspace):
+
+   ```json
+   "chat.plugins.marketplaces": ["kleber-front/docs-produtos"]
+   ```
+
+2. Na visão **Extensions**, procure por `@agentPlugins`, encontre `fluxo-produto-plaenge` e
+   clique em **Install**. Confirme o aviso de confiança do marketplace.
+3. Para instalar sem marketplace, rode no Command Palette **Chat: Install Plugin From Source**
+   e informe `https://github.com/kleber-front/docs-produtos`.
+
+Plugins instalados pelo Copilot CLI também aparecem automaticamente no VS Code.
+
+### GitHub Copilot CLI
+
+```
+copilot plugin marketplace add kleber-front/docs-produtos
+copilot plugin install fluxo-produto-plaenge@plaenge-produto
+```
+
+Confira com `copilot plugin list` e, numa sessão, com `/skills list` e `/agent`.
+Para receber versões novas: `copilot plugin marketplace update plaenge-produto` e
+`copilot plugin update fluxo-produto-plaenge`.
+
+### Claude Code
 
 ```
 /plugin marketplace add kleber-front/docs-produtos
 /plugin install fluxo-produto-plaenge@plaenge-produto
 ```
 
-O repositório é privado: é preciso ter acesso de leitura a ele e o git autenticado na
-máquina (`gh auth login` ou credencial do Git for Windows). Depois de instalar, reinicie o
-Claude Code e confira em `/plugin` se o `fluxo-produto-plaenge` aparece habilitado.
-
-Para receber versões novas: `/plugin marketplace update plaenge-produto`.
-
-### Instalação automática em um projeto
+Depois de instalar, reinicie o Claude Code e confira em `/plugin` se o `fluxo-produto-plaenge`
+aparece habilitado. Para receber versões novas: `/plugin marketplace update plaenge-produto`.
 
 Para que o Claude Code ofereça o plugin a quem abrir um repositório da equipe, inclua no
 `.claude/settings.json` desse repositório:
@@ -47,6 +77,29 @@ Para que o Claude Code ofereça o plugin a quem abrir um repositório da equipe,
 }
 ```
 
+### Outras ferramentas
+
+Codex, Cursor, Gemini CLI e outros assistentes que leem skills no formato `SKILL.md`:
+
+1. Clone o repositório.
+2. Copie as pastas de `skills/` para a pasta de skills da ferramenta (do usuário ou do
+   projeto), mantendo uma pasta por skill com o `SKILL.md` dentro.
+3. Se a ferramenta suportar agentes personalizados, copie também `agents/*.agent.md` para a
+   pasta de agentes dela. Sem agentes, o orquestrador executa cada etapa na própria sessão
+   (ver "Ferramentas da plataforma" em `skills/fluxo-produto/SKILL.md`).
+4. Configure o servidor MCP do Figma (`https://mcp.figma.com/mcp`, HTTP), se a ferramenta
+   suportar MCP.
+
+Para atualizar, rode `git pull` no clone e copie as pastas de novo.
+
+### Compatibilidade entre ferramentas
+
+As skills e os agentes descrevem a ação (perguntar ao usuário, chamar subagente, buscar na
+web) em vez do nome da ferramenta, para funcionar em qualquer assistente. Ao editar, mantenha
+essa regra: não cite ferramentas de uma plataforma só sem indicar a alternativa. Agentes ficam
+em `agents/` com extensão `.agent.md` e sem lista de `tools` nem `model` no cabeçalho, para
+serem lidos tanto pelo Copilot quanto pelo Claude Code.
+
 ## Versionamento
 
 O plugin segue [versionamento semântico](https://semver.org/lang/pt-BR/) (`MAIOR.MENOR.CORREÇÃO`).
@@ -58,8 +111,8 @@ O histórico fica no [CHANGELOG.md](CHANGELOG.md).
 | Nova etapa, skill, referência ou capacidade, sem quebrar o que existe | MENOR | 0.3.0 → 0.4.0 |
 | Ajuste de texto, correção de regra ou de script, sem mudar o comportamento esperado | CORREÇÃO | 0.3.0 → 0.3.1 |
 
-O Claude Code só entrega a atualização quando o número da versão muda. Mudanças publicadas sem
-subir a versão não chegam a quem já instalou.
+O Copilot e o Claude Code só entregam a atualização quando o número da versão muda. Mudanças
+publicadas sem subir a versão não chegam a quem já instalou.
 
 ### Publicar uma versão nova (mantenedor)
 
@@ -67,7 +120,7 @@ subir a versão não chegam a quem já instalou.
    Os dois precisam ter o mesmo valor.
 2. Registre as mudanças no topo do [CHANGELOG.md](CHANGELOG.md).
 3. Faça commit e push na `main` e crie a tag: `git tag v0.3.0 && git push origin v0.3.0`.
-4. Avise a equipe para rodar `/plugin marketplace update plaenge-produto`.
+4. Avise a equipe para atualizar o plugin (comandos em [Instalação](#instalação), por ferramenta).
 
 ## Como usar
 
@@ -88,8 +141,9 @@ subir a versão não chegam a quem já instalou.
 - Node.js e npm (protótipo); Playwright/Chromium para capturas.
 - Conector do Figma (incluído no plugin, `https://mcp.figma.com/mcp`): autentique com a conta
   Figma da Plaenge na primeira vez. Usado na etapa 3 para enviar as telas do protótipo ao Figma.
-  Recomendado: plugin Figma instalado (skills `figma-generate-design` e `figma-use`).
-- Python 3 com `python-docx`; LibreOffice para conferência em PDF (etapa 5).
+  Recomendado: skills do Figma instaladas (`figma-generate-design` e `figma-use`).
+- Python 3 com `python-docx` (comando `python`, `python3` ou `py`); LibreOffice para
+  conferência em PDF (etapa 5).
 
 ## Modelo de documento
 

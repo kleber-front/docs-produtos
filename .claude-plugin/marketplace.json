@@ -9,7 +9,7 @@
       "name": "fluxo-produto-plaenge",
       "source": "./",
       "description": "Fluxo de agentes para projetos do Grupo Plaenge: Entendimento da TAP (com benchmark), Reunião de entendimento, Protótipo navegável React, Requisitos funcionais e técnicos e Documento de especificação ADS, coordenados por um orquestrador.",
-      "version": "0.3.0"
+      "version": "0.4.0"
     }
   ]
 }

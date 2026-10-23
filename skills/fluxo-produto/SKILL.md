@@ -23,20 +23,21 @@ Leia antes de iniciar.
 | 3 | Protótipo | `agente-prototipo` | `prototipo-navegavel` | `prototipo/` + `03-mapa-telas.md` + `design-system.md` | Toda tela ligada ao contexto; validação com negócio registrada |
 | 4 | Requisitos | `agente-requisitos` | `requisitos-projeto` | `04-requisitos.md` | Todo RF OK com CT; todo RF não OK em pendência com destinatário |
 | 5 | Documentação | `agente-documentacao` | `documentacao-especificacao` | `05-especificacao-<projeto>.docx` | Documento no modelo ADS, sem seção inventada, pendências visíveis |
-| 6 | Backlog (opcional) | — | `estruturacao-backlog` (instalada na conta) | `06-backlog.md` | Todo requisito coberto |
-| 7 | Pré-estimativa (opcional) | — | `preparacao-estimativa` (instalada na conta) | `07-pre-estimativa.md` | Itens no DoR ou bloqueio declarado |
+| 6 | Backlog (opcional) | — | `estruturacao-backlog` (instalada no ambiente) | `06-backlog.md` | Todo requisito coberto |
+| 7 | Pré-estimativa (opcional) | — | `preparacao-estimativa` (instalada no ambiente) | `07-pre-estimativa.md` | Itens no DoR ou bloqueio declarado |
 
-Etapas 6 e 7 usam as skills já existentes na conta. Chame-as como subagente genérico pedindo
+Etapas 6 e 7 usam skills instaladas à parte no ambiente. Chame-as como subagente genérico pedindo
 para carregar a skill pelo nome; se não estiverem instaladas, avise e encerre o fluxo na etapa 5.
 
 ## Abertura de um projeto
 
-1. Pergunte (AskUserQuestion), só o que não estiver claro no pedido:
+1. Pergunte (ferramenta de perguntas da plataforma), só o que não estiver claro no pedido:
    - nome curto do projeto (vira pasta e prefixo de arquivos);
    - área solicitante e ponto focal de negócio;
    - tipo de projeto: sistema novo, evolução, substituição de legado, integração, automação,
      com fornecedor;
-   - onde salvar: pasta conectada do computador, projeto do Claude, ou workspace da sessão.
+   - onde salvar: pasta do workspace aberto, outra pasta do computador ou área de trabalho da
+     sessão.
 2. Confirme que a TAP (ou RAP) e os demais documentos foram anexados. Sem documento, pare e
    peça — não rode a etapa 1 sobre material hipotético.
 3. Crie a pasta `fluxo/<projeto>/` e o arquivo de estado `fluxo/<projeto>/estado.md`
@@ -48,7 +49,8 @@ para carregar a skill pelo nome; se não estiverem instaladas, avise e encerre o
 
 1. **Monte o pacote de entrada** conforme `references/pacotes-entrada.md`. Passe ao subagente
    caminhos de arquivo, não o conteúdo colado, exceto respostas do usuário.
-2. **Chame o subagente** com a ferramenta Agent, usando o agente da tabela. O prompt sempre
+2. **Chame o subagente** com a ferramenta de subagentes da plataforma, usando o agente da
+   tabela (sem suporte a subagentes, veja "Ferramentas da plataforma"). O prompt sempre
    contém: "Modo subagente", o nome do projeto, a lista de arquivos de entrada, o caminho de
    saída esperado, a versão a gerar e — em reemissão — as respostas recebidas, uma por Q-ID.
 3. **Leia o bloco de status** devolvido.
@@ -57,8 +59,9 @@ para carregar a skill pelo nome; se não estiverem instaladas, avise e encerre o
    - `concluido` / `concluido-com-ressalvas` → verifique o gate.
 4. **Verifique o gate** lendo o artefato contra o critério da tabela (checklists em
    `references/gates.md`). Quem produziu não se auto-aprova: a verificação é sua.
-5. **Apresente ao usuário**, com SendUserMessage: o que foi gerado (uma linha), o resultado do
-   gate, as pendências críticas e a pergunta de avanço. Envie os arquivos com SendUserFile.
+5. **Apresente ao usuário**: o que foi gerado (uma linha), o resultado do gate, as pendências
+   críticas e a pergunta de avanço. Indique o caminho dos arquivos gerados (ou anexe-os, se a
+   plataforma permitir).
 6. **Avance só com confirmação explícita.** Atualize `estado.md` (versão, gate, data).
 
 ## Envio ao Figma (etapa 3)
@@ -74,8 +77,8 @@ um novo. Sem o conector, avise o usuário em uma linha e siga — não bloqueia 
 
 - Junte as perguntas do artefato, mantenha no máximo 7 por rodada, ordenadas por criticidade,
   agrupadas por tema, com destinatário.
-- Pergunta cujo destinatário não é o usuário (negócio, TI, fornecedor) não vai para
-  AskUserQuestion: liste-a e pergunte se o usuário quer seguir com suposição declarada ou
+- Pergunta cujo destinatário não é o usuário (negócio, TI, fornecedor) não vai para a
+  ferramenta de perguntas: liste-a e pergunte se o usuário quer seguir com suposição declarada ou
   aguardar a resposta.
 - Na etapa 1, as perguntas **não** são respondidas agora: elas formam o roteiro da reunião.
   O gate da etapa 1 é ter as perguntas certas, não as respostas.
@@ -92,6 +95,25 @@ Descoberta em etapa posterior volta à etapa dona da informação. Tabela em
 
 Exemplo frequente: na validação do protótipo, o negócio cita uma regra nova → volta ao
 contexto (etapa 2, como atualização pós-reunião) → protótipo da tela afetada → requisitos.
+
+## Ferramentas da plataforma
+
+O fluxo roda em qualquer assistente que leia skills (`SKILL.md`): GitHub Copilot (VS Code e
+CLI), Claude Code, Codex, Cursor, Gemini CLI e outros. As instruções descrevem a ação, não o
+nome da ferramenta; use a equivalente disponível:
+
+| Ação | Exemplos |
+|------|----------|
+| Perguntar ao usuário | `AskUserQuestion` (Claude), `ask_user` / perguntas do chat (Copilot); sem ferramenta, pergunte em texto e pare o turno |
+| Chamar subagente | `Agent`/`Task` (Claude), `runSubagent` / `task` (Copilot) |
+| Carregar skill | ferramenta `Skill`/`skill`; sem ela, leia o `SKILL.md` da pasta da skill |
+| Busca e leitura web | `WebSearch`/`WebFetch` (Claude), `web_fetch` / ferramentas web (Copilot) |
+
+**Sem suporte a subagentes** (ou se o agente da etapa não estiver disponível): execute a etapa
+na própria sessão. Leia o arquivo do agente (`agents/<agente>.agent.md` do plugin) e siga-o,
+carregue a skill da etapa e trabalhe em "modo subagente" — sem perguntar ao usuário durante a
+etapa e terminando com o bloco de status. Depois, retome o papel de orquestrador a partir do
+passo 3 do ciclo.
 
 ## Retomada
 

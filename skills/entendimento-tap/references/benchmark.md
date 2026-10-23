@@ -28,13 +28,13 @@ funcionalidades e boas práticas).
 
 1. **Descreva o problema em termos de capacidade**, não de tela: "gestão de solicitações de
    reembolso com aprovação por alçada", "controle de chamados de material de obra".
-2. **Faça buscas em paralelo** (WebSearch), em português e inglês, variando:
+2. **Faça buscas em paralelo** (ferramenta de busca web), em português e inglês, variando:
    - categoria de software ("software de gestão de reembolso", "expense management software");
    - setor ("construção civil", "incorporadora", "construction ERP add-on");
    - plataforma corporativa já usada pela empresa, quando conhecida pelas fontes (ex.: módulos
      do ERP, ecossistema Microsoft 365 — Power Apps, SharePoint, Power Automate);
    - nomes de concorrentes que aparecerem nos primeiros resultados.
-3. **Abra as páginas oficiais** dos candidatos (WebFetch) para confirmar funcionalidades e
+3. **Abra as páginas oficiais** dos candidatos (ferramenta de leitura de página web) para confirmar funcionalidades e
    modelo de preço. Resultado de busca não basta como evidência.
 4. **Registre data de consulta e link** de cada informação. Preço e funcionalidade mudam.
 5. **Pare em 3 a 6 alternativas relevantes.** Mais que isso dilui a análise. Se não encontrar 3,

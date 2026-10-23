@@ -87,7 +87,7 @@ flowchart TD
 
     B -->|aguardando-respostas| R["Rodada de perguntas<br/>máx. 7 · por criticidade · por tema ·<br/>com destinatário"]
     R --> D{"Destinatário<br/>é o usuário?"}
-    D -->|sim| AQ["AskUserQuestion"]
+    D -->|sim| AQ["Pergunta ao usuário<br/>(ferramenta de perguntas)"]
     D -->|"não (negócio, TI, fornecedor)"| SUP{"Seguir com<br/>suposição declarada?"}
     SUP -->|sim| RS["Registra suposição em estado.md"]
     SUP -->|não| AG(["Aguarda terceiros<br/>registrado em estado.md"])

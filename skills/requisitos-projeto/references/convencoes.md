@@ -66,8 +66,8 @@ agente `fluxo-produto`):
 - Termine **sempre** com o bloco de status abaixo, como última coisa da resposta.
 - Nunca marque uma pendência como resolvida sem que a resposta esteja no pacote de entrada.
 
-Quando roda diretamente com o usuário, pergunte com AskUserQuestion e pare o turno quando a
-skill mandar perguntar.
+Quando roda diretamente com o usuário, pergunte pela ferramenta de perguntas da plataforma
+(sem ela, em texto) e pare o turno quando a skill mandar perguntar.
 
 ## Bloco de status
 

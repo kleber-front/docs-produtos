@@ -6,7 +6,7 @@ continua sendo a fonte da verdade: o Figma é espelho para revisão, não origem
 
 ## Pré-requisitos
 
-- Conector do Figma ativo na sessão (ferramentas `mcp__...figma...__*`). Se não estiver
+- Conector do Figma ativo na sessão (ferramentas do servidor MCP `figma`). Se não estiver
   disponível, registre "Envio ao Figma: pendente — conector indisponível" no mapa de telas e
   siga; não bloqueia o gate.
 - Carregue as skills do plugin Figma quando estiverem listadas: `figma:figma-generate-design`
